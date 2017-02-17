@@ -22,5 +22,4 @@ if(isset($_GET)) {
 $dot_px = 10;
 
 $atlas = get_atlas($ap, $ml, $dv);
-
 echo json_encode($atlas);

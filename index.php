@@ -107,7 +107,7 @@ $atlas = get_atlas($ap, $ml, $dv);
       <p class="lead">Coronal</p>
       <div class ="span12">
         <div class="dot" style="margin-left:<?php echo ($atlas['coronal']['left']) - ($dot_px / 2); ?>px;margin-top:<?php echo ($atlas['coronal']['top']) - ($dot_px / 2); ?>px;"></div>
-        <img src="<?php echo $atlas['coronal']['image']; ?>" />
+        <img src="<?php echo $atlas['coronal']['image_url']; ?>" />
       </div>
     </div>
 
@@ -115,7 +115,7 @@ $atlas = get_atlas($ap, $ml, $dv);
       <p class="lead">Sagittal</p>
       <div class ="span12">
         <div class="dot" style="margin-left:<?php echo ($atlas['sagittal']['left']) - ($dot_px / 2); ?>px;margin-top:<?php echo ($atlas['sagittal']['top']) - ($dot_px / 2); ?>px;"></div>
-        <img src="<?php echo $atlas['sagittal']['image']; ?>" />
+        <img src="<?php echo $atlas['sagittal']['image_url']; ?>" />
       </div>
     </div>
 
@@ -123,7 +123,7 @@ $atlas = get_atlas($ap, $ml, $dv);
       <p class="lead">Horizontal</p>
       <div class ="span12">
         <div class="dot" style="margin-left:<?php echo ($atlas['horizontal']['left']) - ($dot_px / 2); ?>px;margin-top:<?php echo ($atlas['horizontal']['top']) - ($dot_px / 2); ?>px;"></div>
-        <img src="<?php echo $atlas['horizontal']['image']; ?>" />
+        <img src="<?php echo $atlas['horizontal']['image_url']; ?>" />
       </div>
     </div>
 

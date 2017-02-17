@@ -18,7 +18,7 @@ function get_atlas($ap, $ml, $dv, $dot_px) {
   $keys = array_keys($min, min($min)); 
   $csv_coronal_key = $keys[0];
 
-  $coronal_image = "images/Rat_Brain_Atlas_$csv_coronal_key.jpg";
+  $coronal_image = "/images/Rat_Brain_Atlas_$csv_coronal_key.jpg";
   $coronal_pixel_x_0 = $csv[$csv_coronal_key][2];
   $coronal_pixel_y_0 = $csv[$csv_coronal_key][3];
   $coronal_px_per_mm_x = $csv[$csv_coronal_key][4];
@@ -37,7 +37,7 @@ function get_atlas($ap, $ml, $dv, $dot_px) {
   $keys = array_keys($min, min($min)); 
   $csv_sagittal_key = $keys[0];
 
-  $sagittal_image = "images/Rat_Brain_Atlas_$csv_sagittal_key.jpg";
+  $sagittal_image = "/images/Rat_Brain_Atlas_$csv_sagittal_key.jpg";
   $sagittal_pixel_x_0 = $csv[$csv_sagittal_key][2];
   $sagittal_pixel_y_0 = $csv[$csv_sagittal_key][3];
   $sagittal_px_per_mm_x = $csv[$csv_sagittal_key][4];
@@ -56,7 +56,7 @@ function get_atlas($ap, $ml, $dv, $dot_px) {
   $keys = array_keys($min, min($min)); 
   $csv_horizontal_key = $keys[0];
 
-  $horizontal_image = "images/Rat_Brain_Atlas_$csv_horizontal_key.jpg";
+  $horizontal_image = "/images/Rat_Brain_Atlas_$csv_horizontal_key.jpg";
   $horizontal_pixel_x_0 = $csv[$csv_horizontal_key][2];
   $horizontal_pixel_y_0 = $csv[$csv_horizontal_key][3];
   $horizontal_px_per_mm_x = $csv[$csv_horizontal_key][4];
@@ -65,18 +65,19 @@ function get_atlas($ap, $ml, $dv, $dot_px) {
   $horizontal_margin_left = ($horizontal_pixel_x_0 + (($ap * -1) * $horizontal_px_per_mm_x));
   $horizontal_margin_top = $horizontal_pixel_y_0 + (($ml * -1) * $horizontal_px_per_mm_y);
 
+  $url_path = "http://$_SERVER[HTTP_HOST]/rat-brain-atlas";
   $r = array();
   $r['coronal'] = array(
-    'image' => $coronal_image, 
+    'image_url' => $url_path . $coronal_image, 
     'left' => $coronal_margin_left, 
     'top' => $coronal_margin_top
     );
   $r['sagittal'] = array(
-    'image' => $sagittal_image, 
+    'image_url' => $url_path . $sagittal_image, 
     'left' => $sagittal_margin_left, 
     'top' => $sagittal_margin_top);
   $r['horizontal'] = array(
-    'image' => $horizontal_image, 
+    'image_url' => $url_path . $horizontal_image, 
     'left' => $horizontal_margin_left, 
     'top' => $horizontal_margin_top);
 
