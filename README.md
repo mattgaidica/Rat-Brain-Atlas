@@ -1,0 +1,2 @@
+- I used Docsplit to split the PDF pages, then a Photoshop action to turn them into 940px wide jpgs: >> docsplit pages /Users/mattgaidica/Desktop/MBSC.pdf
+- The CSV files are formatted as such: Section Type, Section Depth, Bregma Pixel, Inner Frame Y-coord (top left), 1mm Width, 1mm Height. Use F8 (or View > Info) in Photoshop to view pixel info.
